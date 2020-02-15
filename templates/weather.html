@@ -1,0 +1,43 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<div class="center-on-page">
+<h1>Can we play golf?</h1>
+<form class="form-inline" method="POST" action="{{ url_for('result') }}">
+   <p>Outlook</p>
+   <div class="select">
+        <select name="outlook_select" class="selectpicker form-control">
+        {% for o in outlook_data %}
+         <option value="{{ o.name }}">{{ o.name }}</option>
+        {% endfor %}
+        </select>
+   </div>
+
+    <p>Temperature</p>
+    <div class="select">
+        <select name="temperature_select" class="selectpicker form-control">
+        {% for o in temperature_data %}
+         <option value="{{ o.name }}">{{ o.name }}</option>
+        {% endfor %}
+        </select>
+   </div>
+
+    <p>Humidity<p/>
+    <div class="select">
+        <select name="humidity_select" class="selectpicker form-control">
+        {% for o in humidity_data %}
+         <option value="{{ o.name }}">{{ o.name }}</option>
+        {% endfor %}
+        </select>
+   </div>
+
+    <p>Windy</p>
+    <div class="select">
+    <select name="windy_select" class="selectpicker form-control">
+        {% for o in windy_data %}
+         <option value="{{ o.name }}">{{ o.name }}</option>
+        {% endfor %}
+        </select>
+   </div>
+
+    <button type="submit" class="btn">Predict</button>
+</form>

@@ -1,0 +1,14 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<div class="center-on-page">
+   <h1>
+   {% set my_string = "static/img/" + "decision_tree" + ".png" %}
+   <img src="{{ my_string }}" class="svg" fill="white" height="auto" vertical-align="middle" width="auto">
+  </h1>
+   <h1>{{ data[0] }}</h1>
+  <p style="text-align: center;">Outlook: {{ data[1] }}</p>
+  <p style="text-align: center;">Temperature: {{ data[2] }}</p>
+  <p style="text-align: center;">Humidity: {{ data[3] }}</p>
+  <p style="text-align: center;">Windy: {{ data[4] }}</p>
+
+</div>
