@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from sklearn.externals import joblib
+import joblib
 
 app = Flask(__name__)
 
