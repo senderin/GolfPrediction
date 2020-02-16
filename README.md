@@ -11,7 +11,7 @@ It is here the steps that I've followed in order to figure out how to do:
 
     Source code is mostly the same except for the visualization of the decision tree.
 
-2. Implementing the API for model and web app by following another great tutorial:
+2. Implementing the API for model by following another great tutorial:
 
     https://towardsdatascience.com/building-prediction-apis-in-python-part-1-series-introduction-basic-example-fe89e12ffbd3
 
