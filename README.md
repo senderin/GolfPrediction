@@ -30,13 +30,16 @@ It is here the steps that I've followed in order to figure out how to do:
 **Some important points:**
 
 * The error "Couldn't find that process type"
-I've run the command: heroku ps:scale web=1 --app golfprediction. Maybe, needed some extra steps such as removing existing buildpacks.
-You can look at the page: https://help.heroku.com/W23OAFGK/why-am-i-seeing-couldn-t-find-that-process-type-when-trying-to-scale-dynos
+
+    I've run the command: heroku ps:scale web=1 --app golfprediction. Maybe, needed some extra steps such as removing existing buildpacks.
+    You can look at the page: https://help.heroku.com/W23OAFGK/why-am-i-seeing-couldn-t-find-that-process-type-when-trying-to-scale-dynos
 
 * Setting Procfile:
-web:gunicorn app:app is standard Procfile. It means that there is a app.py file and a flask object is created in that file. 
-Hence, I've need to set it in that way: web:gunicorn GolfPrediction_API:app
+
+    web:gunicorn app:app is standard Procfile. It means that there is a app.py file and a flask object is created in that file. 
+    Hence, I've need to set it in that way: web:gunicorn GolfPrediction_API:app
 
 * requirements.txt
-requirements.txt should contain all Python packages that are used. 
-If there is missing one, you can see in the log viewer in the Heroku such as "ModuleNotFoundError: No module named 'joblib'" message.
+
+    requirements.txt should contain all Python packages that are used. 
+    If there is missing one, you can see in the log viewer in the Heroku such as "ModuleNotFoundError: No module named 'joblib'" message.
